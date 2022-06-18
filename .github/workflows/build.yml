@@ -98,6 +98,8 @@ jobs:
         run: qmake RELEASE=1 USE_QRCODES=1 USE_UPNP=1 USE_IPV6=1
       - name: Make
         run: make
+      - name: list
+        run: ls -a
       - uses: actions/upload-artifact@v2
         with:
           name: litedoge-${{ github.sha }}-${{ matrix.name }}
